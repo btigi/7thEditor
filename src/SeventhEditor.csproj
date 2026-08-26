@@ -1,0 +1,24 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net10.0-windows</TargetFramework>
+		<RootNamespace>SeventhEditor</RootNamespace>
+		<AssemblyName>SeventhEditor</AssemblyName>
+		<Version>1.0.0</Version>
+		<Nullable>enable</Nullable>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<UseWPF>true</UseWPF>
+		<ApplicationIcon>icon.ico</ApplicationIcon>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="CommunityToolkit.Mvvm" Version="8.4.2" />
+		<PackageReference Include="ii.EighthSolitude" Version="0.8.1" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="icon.ico" />
+	</ItemGroup>
+
+</Project>

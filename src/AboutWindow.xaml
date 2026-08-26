@@ -1,0 +1,31 @@
+<Window x:Class="SeventhEditor.AboutWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="About 7thEditor"
+        Icon="/icon.ico"
+        SizeToContent="WidthAndHeight"
+        ResizeMode="NoResize"
+        WindowStartupLocation="CenterOwner"
+        ShowInTaskbar="False"
+        MinWidth="320">
+    <StackPanel Margin="40,28,40,24" HorizontalAlignment="Center">
+        <TextBlock Text="7thEditor"
+                   FontSize="28"
+                   FontWeight="Bold"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,8" />
+        <TextBlock Text="7th Legion Unit Editor"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,8" />
+        <TextBlock x:Name="VersionText"
+                   HorizontalAlignment="Center"
+                   Margin="0,0,0,24" />
+        <Button Content="OK"
+                Width="88"
+                Height="28"
+                HorizontalAlignment="Center"
+                IsDefault="True"
+                IsCancel="True"
+                Click="Ok_Click" />
+    </StackPanel>
+</Window>
