@@ -80,6 +80,23 @@ public partial class MainViewModel : ObservableObject
         }
     }
 
+    public bool IsThemeLight => AppSettings.Instance.Theme == ThemeOption.Light;
+
+    public bool IsThemeDark => AppSettings.Instance.Theme == ThemeOption.Dark;
+
+    public bool IsThemeSystem => AppSettings.Instance.Theme == ThemeOption.System;
+
+    [RelayCommand]
+    private void SetTheme(ThemeOption theme)
+    {
+        AppSettings.Instance.Theme = theme;
+        AppSettings.Instance.Save();
+        ThemeManager.ApplyTheme(theme);
+        OnPropertyChanged(nameof(IsThemeLight));
+        OnPropertyChanged(nameof(IsThemeDark));
+        OnPropertyChanged(nameof(IsThemeSystem));
+    }
+
     [RelayCommand]
     private void Open()
     {

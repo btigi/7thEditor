@@ -8,6 +8,7 @@ public partial class AboutWindow : Window
     public AboutWindow()
     {
         InitializeComponent();
+        ThemeManager.InitializeWindow(this);
         VersionText.Text = $"Version {GetVersion()}";
     }
 
